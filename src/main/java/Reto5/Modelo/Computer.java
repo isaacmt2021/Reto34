@@ -27,9 +27,9 @@ public class Computer implements Serializable {
        @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String name; 
-    private String address;
-    private Integer  extension; 
+    private String brand; 
+    private Integer year;
+    private String  name; 
     private String description;
     
     @ManyToOne
@@ -53,6 +53,22 @@ public class Computer implements Serializable {
         this.id = id;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setYear(Integer year) {
+        this.year = year;
+    }
+
     public String getName() {
         return name;
     }
@@ -61,22 +77,7 @@ public class Computer implements Serializable {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public Integer getExtension() {
-        return extension;
-    }
-
-    public void setExtension(Integer extension) {
-        this.extension = extension;
-    }
-
+    
     public String getDescription() {
         return description;
     }
